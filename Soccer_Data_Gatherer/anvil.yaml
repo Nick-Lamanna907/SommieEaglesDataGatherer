@@ -1,0 +1,73 @@
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {auto_create_missing_columns: false}
+package_name: Soccer_Data_Gatherer
+allow_embedding: false
+name: Soccer Data Gatherer
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox}
+metadata: {}
+startup_form: welcome_teamData
+db_schema:
+  player_data:
+    title: Player Data
+    client: full
+    server: full
+    columns:
+    - name: team
+      admin_ui: {width: 200}
+      type: string
+    - name: date
+      admin_ui: {width: 200}
+      type: string
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+    - name: passS
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: passF
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: shotS
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: shotF
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: yellowCard
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: redCard
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: assist
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: subOn
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: subOff
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: goal
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: win
+      admin_ui: {width: 200}
+      type: bool
+  players:
+    title: Players
+    client: full
+    server: full
+    columns:
+    - name: Name
+      admin_ui: {width: 200}
+      type: string
+    - name: Number
+      admin_ui: {width: 200}
+      type: string
+    - name: Playing
+      admin_ui: {width: 200}
+      type: bool
+renamed: true

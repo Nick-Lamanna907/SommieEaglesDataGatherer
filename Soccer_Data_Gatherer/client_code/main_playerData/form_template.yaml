@@ -1,0 +1,244 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+  event_bindings: {}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '',
+      spacing_below: small, background: ''}
+    name: cp1
+    layout_properties: {grid_position: 'HBDCWV,URYCCO', full_width_row: true}
+    event_bindings: {}
+  - type: ColumnPanel
+    properties: {}
+    name: cp2
+    layout_properties: {grid_position: 'HBDCWV,HJNDYL', full_width_row: true}
+  - type: ColumnPanel
+    properties: {}
+    name: cp3
+    layout_properties: {grid_position: 'HBDCWV,JDOUZZ', full_width_row: true}
+  - type: ColumnPanel
+    properties: {}
+    name: cp4
+    layout_properties: {grid_position: 'HBDCWV,YOJXHO', full_width_row: true}
+  - type: ColumnPanel
+    properties: {}
+    name: cp5
+    layout_properties: {grid_position: 'HBDCWV,PHKQCE', full_width_row: true}
+  - type: ColumnPanel
+    properties: {}
+    name: cp6
+    layout_properties: {grid_position: 'HBDCWV,WZBZUE', full_width_row: true}
+  - type: ColumnPanel
+    properties: {}
+    name: cp7
+    layout_properties: {grid_position: 'HBDCWV,ZODTXC', full_width_row: true}
+  - type: ColumnPanel
+    properties: {}
+    name: cp8
+    layout_properties: {grid_position: 'HBDCWV,ZZEHIR', full_width_row: true}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: '00:00', font_size: 36, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: lblTime
+    layout_properties: {grid_position: 'EWQNPR,TCODSP'}
+    event_bindings: {}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {grid_position: 'EWQNPR,OUVKGW'}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'SESC 0 - 0 ', font_size: 36, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: lblScore
+    layout_properties: {grid_position: 'EWQNPR,ERHHVX'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: yellow, visible: true, text: Start, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: blue, bold: false,
+      underline: false, icon: ''}
+    name: btnTimerControl
+    layout_properties: {grid_position: 'NRFWWL,GDMFQZ'}
+    event_bindings: {click: btnTimerControl_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: yellow, visible: true, text: HALFT, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: blue, bold: false,
+      underline: false, icon: ''}
+    name: btnHalfTime
+    layout_properties: {grid_position: 'NRFWWL,BHPPHO'}
+    event_bindings: {click: btnHalfTime_click}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Success, font_size: 18, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: lblSuccess
+    layout_properties: {grid_position: 'DOXQWZ,BKVQBU'}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Fail, font_size: 18, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
+    name: lblFail
+    layout_properties: {grid_position: 'DOXQWZ,PICETV'}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_1
+    layout_properties: {grid_position: 'PPTXNL,HUQRLL'}
+    components:
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: yellow, visible: true, text: PASS, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: blue, bold: false, underline: false, icon: ''}
+      name: btnPassS
+      layout_properties: {grid_position: 'LRMFDT,ILHNZS', full_width_row: true}
+      event_bindings: {click: btnPassS_click}
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: yellow, visible: true, text: Shot, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: blue, bold: false, underline: false, icon: ''}
+      name: btnShotS
+      layout_properties: {grid_position: 'LRMFDT,TXNLSB', full_width_row: true}
+      event_bindings: {click: btnShotS_click}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_2
+    layout_properties: {grid_position: 'PPTXNL,MWORXO'}
+    components:
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: yellow, visible: true, text: PASS, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: blue, bold: false, underline: false, icon: ''}
+      name: btnPassF
+      layout_properties: {grid_position: 'CDBDYT,SDZLBJ'}
+      event_bindings: {click: btnPassF_click}
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: yellow, visible: true, text: shot, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: blue, bold: false, underline: false, icon: ''}
+      name: btnShotF
+      layout_properties: {grid_position: 'CDBDYT,VACLNS'}
+      event_bindings: {click: btnShotF_click}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_3
+    layout_properties: {grid_position: 'CIZMIM,QYHWZH'}
+    components:
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: yellow, visible: true, text: sub on, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: blue, bold: false, underline: false, icon: ''}
+      name: btnSubOn
+      layout_properties: {grid_position: 'VPZOZI,JTQKPV', full_width_row: true}
+      event_bindings: {click: btnSubOn_click}
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: yellow, visible: true, text: Som Goal, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: blue, bold: false, underline: false, icon: ''}
+      name: btnOurGoal
+      layout_properties: {grid_position: 'VPZOZI,OXXNCI', full_width_row: true}
+      event_bindings: {click: btnOurGoal_click}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_4
+    layout_properties: {grid_position: 'CIZMIM,QBWYMW'}
+    components:
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: yellow, visible: true, text: sub off, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: blue, bold: false, underline: false, icon: ''}
+      name: btnSubOff
+      layout_properties: {grid_position: 'XOLSZW,TSTTFC', full_width_row: true}
+      event_bindings: {click: btnSubOff_click}
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: yellow, visible: true, text: opp Goal, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: blue, bold: false, underline: false, icon: ''}
+      name: btnOppGoal
+      layout_properties: {grid_position: 'XOLSZW,IRUVVB', full_width_row: true}
+      event_bindings: {click: btnOppGoal_click}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Misc, font_size: 18, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'UMPFOY,SSUKRC'}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_5
+    layout_properties: {grid_position: 'ARCSIR,NAJQAZ'}
+    components:
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: yellow, visible: true, text: Assist, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: blue, bold: false, underline: false, icon: ''}
+      name: btnAsst
+      layout_properties: {grid_position: 'USYZIS,RWYOMH', full_width_row: true}
+      event_bindings: {click: btnAssist_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: orange, visible: true, text: Save data, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: 'theme:Gray 300', bold: false, underline: false, icon: ''}
+    name: btnLoadData
+    layout_properties: {grid_position: 'ARCSIR,LFJDAJ'}
+    event_bindings: {click: loadData}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_7
+    layout_properties: {grid_position: 'ARCSIR,AIZIVJ'}
+    components:
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: yellow, visible: true, text: C - Yel, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: blue, bold: false, underline: false, icon: ''}
+      name: btnYel
+      layout_properties: {grid_position: 'PKMMFX,DHRAPB', full_width_row: true}
+      event_bindings: {click: btnYel_click}
+    - type: Button
+      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+        foreground: yellow, visible: true, text: c - Red, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: blue, bold: false, underline: false, icon: ''}
+      name: btnRed
+      layout_properties: {grid_position: 'PKMMFX,DKUQHU', full_width_row: true}
+      event_bindings: {click: btnRed_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: Timer
+  properties: {interval: 1}
+  name: timer
+  event_bindings: {tick: timer_tick}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Match info:
+
+      ', font_size: null, font: '16', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: lblTimeline
+  layout_properties: {slot: left-nav}

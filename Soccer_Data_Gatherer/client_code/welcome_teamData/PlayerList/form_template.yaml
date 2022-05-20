@@ -1,0 +1,33 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 16, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: lblPlayerName
+  layout_properties: {grid_position: 'AIPDRO,NTOYPR'}
+  data_bindings:
+  - {property: text, code: 'self.item[''Name'']'}
+  event_bindings: {}
+- type: TextBox
+  properties: {role: null, align: center, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 16,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: tbPlayerNum
+  layout_properties: {grid_position: 'AIPDRO,DWLMBQ'}
+  data_bindings:
+  - {property: text, code: 'self.item[''Number'']', writeback: true}
+- type: CheckBox
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+    bold: false, checked: false, underline: false}
+  name: cbPlaying
+  layout_properties: {grid_position: 'AIPDRO,CKFHTP'}
+  data_bindings:
+  - {property: checked, code: 'self.item[''Playing'']', writeback: true}
+is_package: true
+item_type: {table_id: 221038}
